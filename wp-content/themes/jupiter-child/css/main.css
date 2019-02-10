@@ -1,0 +1,378 @@
+@charset "UTF-8";
+.hide {
+  display: none; }
+
+#canvas {
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 99999999999999999999999999999999; }
+
+#footer-canvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1; }
+
+.small-canvas-container {
+  z-index: 2; }
+  .small-canvas-container .mk-grid {
+    position: relative;
+    z-index: 9999999999999999999999999999; }
+
+@media (max-width: 600px) {
+  .canvas-container, .canvas-container * {
+    min-height: 0 !important; }
+
+  .canvas-container {
+    min-height: 100vh !important;
+    margin-top: -100px; } }
+.main-navigation-ul > li.menu-item > a.menu-item-link {
+  font-size: 16px !important; }
+
+.footer-wrapper .mk-col-1-2 {
+  padding: 0 !important; }
+
+.darken {
+  position: relative; }
+  .darken::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2); }
+
+h4.icon-box-title {
+  text-transform: uppercase !important; }
+
+.home-contact-button {
+  margin-left: 6rem !important; }
+  @media (max-width: 1000px) {
+    .home-contact-button {
+      margin-left: 3rem !important; } }
+  @media (max-width: 800px) {
+    .home-contact-button {
+      margin-left: 0 !important; } }
+  .home-contact-button button {
+    font-size: 1.2rem !important;
+    padding: 0.8rem 2rem !important;
+    background: #96ce09 !important;
+    border: none !important;
+    color: #fff !important; }
+    .home-contact-button button:hover {
+      background: #84b608 !important; }
+
+.home-asociados-imagen figure {
+  margin-top: 1.5rem !important; }
+
+.soluciones-titulo-1, .soluciones-titulo-2, .soluciones-texto-3 {
+  position: relative;
+  display: inline-block; }
+
+.soluciones-titulo-1::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: lightblue;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  transform: translate(130%, -40%); }
+
+.soluciones-titulo-2::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: lightgreen;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  transform: translate(-130%, -20%); }
+
+.soluciones-texto-3::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: lightgreen;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  right: 0;
+  transform: translate(85%, -85%);
+  z-index: -1; }
+
+.nosotros-texto-cita {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem !important; }
+
+.home-call-to-action {
+  background: transparent !important;
+  border: none !important;
+  margin-top: 1rem; }
+
+.home-descripciones a {
+  background: #999 !important; }
+  .home-descripciones a:hover {
+    background: #2e45a2 !important; }
+
+.mk-half-layout-container {
+  min-height: 50vw !important;
+  display: flex !important;
+  align-items: center !important; }
+
+.wsp-icon {
+  position: fixed;
+  right: 130px;
+  bottom: 10px;
+  width: 70px;
+  height: 70px;
+  background: url("../img/wsp-icon.png");
+  background-size: contain;
+  border-radius: 50%;
+  z-index: 99999;
+  border: #fff solid 3px; }
+
+@media (max-width: 1200px) {
+  .wsp-icon {
+    bottom: 14px;
+    right: 80px;
+    width: 50px;
+    height: 50px; }
+
+  #progressBar {
+    display: none; } }
+@media (max-width: 800px) {
+  .mk-half-layout-inner {
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+
+  .mk-half-layout-inner h2 {
+    text-align: center !important;
+    display: block; } }
+.mk-circle-image__title {
+  background: none !important; }
+
+.mk-circle-image__holder img {
+  border-radius: 50% !important; }
+
+.mk-circle-image__holder {
+  position: relative;
+  overflow: visible !important; }
+
+.mk-circle-image__holder a {
+  position: relative; }
+
+.mk-circle-image__holder a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50% !important; }
+
+.mk-circle-image__holder a::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  transform: translate(-50%, -50%);
+  line-height: 2rem; }
+
+.seguridad-circulo-1 .mk-circle-image__holder a::after {
+  content: "VIDEOVIGILANCIA"; }
+
+.seguridad-circulo-2 .mk-circle-image__holder a::after {
+  content: "COMUNICACIONES"; }
+
+.seguridad-circulo-3 .mk-circle-image__holder a::after {
+  content: "CONTROL DE ACCESOS"; }
+
+.seguridad-circulo-4 .mk-circle-image__holder a::after {
+  content: "CONTROL IOT E INTRUCIÓN"; }
+
+.energia-circulo-1 .mk-circle-image__holder a::after {
+  content: "UPS EATON"; }
+
+.energia-circulo-2 .mk-circle-image__holder a::after {
+  content: "ENERGYSURE"; }
+
+.energia-circulo-3 .mk-circle-image__holder a::after {
+  content: "TABLEROS DE COMANDO"; }
+
+.energia-circulo-4 .mk-circle-image__holder a::after {
+  content: "GRUPOS ELECTRÓGENOS"; }
+
+.conectividad-circulo-1 .mk-circle-image__holder a::after {
+  content: "SISTEMA DE INFRAESTRUCTURA OPTICA PASIVA"; }
+
+.conectividad-circulo-2 .mk-circle-image__holder a::after {
+  content: "SISTEMA DE CABLEADO ESTRUCTURADO"; }
+
+.conectividad-circulo-3 .mk-circle-image__holder a::after {
+  content: "SWITCHING & WIRELESS SOLUTIONS"; }
+
+.conectividad-circulo-4 .mk-circle-image__holder a::after {
+  content: "SEGURIDAD DE REDES"; }
+
+.infraestructura-circulo-1 .mk-circle-image__holder a::after {
+  content: "TABLEROS ESPECIALES";
+  bottom: 0;
+  left: 0;
+  transform: translateY(120%);
+  color: #222;
+  text-align: center !important;
+  width: 100% !important; }
+
+.infraestructura-circulo-2 .mk-circle-image__holder a::after {
+  content: "INSTALACIONES ELÉCTRICAS";
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  color: #222;
+  text-align: center !important;
+  width: 100% !important; }
+
+.infraestructura-circulo-3 .mk-circle-image__holder a::after {
+  content: "ILUMINACIÓN SUSTENTABLE";
+  bottom: 0;
+  left: 0;
+  transform: translateY(120%);
+  color: #222;
+  text-align: center !important;
+  width: 100% !important; }
+
+.infraestructura-circulo-4 .mk-circle-image__holder a::after {
+  content: "RACKS";
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  color: #222;
+  text-align: center !important;
+  width: 100% !important; }
+
+.infraestructura-circulo-5 .mk-circle-image__holder a::after {
+  content: "DETECCIÓN INTELIGENTE";
+  bottom: 0;
+  left: 0;
+  transform: translateY(120%);
+  color: #222;
+  text-align: center !important;
+  width: 100% !important; }
+
+.infraestructura-circulo-6 .mk-circle-image__holder a::after {
+  content: "ENFRIAMIENTO";
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  color: #222;
+  text-align: center !important;
+  width: 100% !important; }
+
+.pasarela-de-marcas .mk-fullwidth-slideshow.stretch-images-true .mk-flex-slides li img {
+  margin: -20% 0 !important; }
+
+.marcas-izquierda {
+  margin-left: -10%; }
+
+.marcas-derecha {
+  margin-left: 20%; }
+
+@media (max-width: 700px) {
+  .marcas-izquierda {
+    margin-left: 0%; }
+
+  .marcas-derecha {
+    margin-left: 0%; }
+
+  .marcas-title {
+    line-height: 100% !important; }
+
+  .no-padding-siblings ~ div {
+    height: 0 !important; }
+
+  .no-padding-siblings ~ div:last-of-type {
+    height: 60px !important; } }
+.vc_images_carousel.vc_per-view-more .vc_carousel-slideline .vc_carousel-slideline-inner > .vc_item > .vc_inner {
+  margin: 0 60px 0 0 !important; }
+
+.marcas-de-clientes {
+  width: 100%;
+  border: 1px solid #fff;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin-bottom: 7rem; }
+  .marcas-de-clientes .marca {
+    border: solid #ccc;
+    border-width: 0 1px 1px 0;
+    width: 20%;
+    margin: 0;
+    padding: 40px 60px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-out; }
+    .marcas-de-clientes .marca:hover {
+      opacity: 1; }
+    .marcas-de-clientes .marca img {
+      width: 100%; }
+
+@media (min-width: 1001px) {
+  .marcas-de-clientes {
+    width: 100%;
+    border: 1px solid #fff;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap; }
+    .marcas-de-clientes .marca:nth-child(5n) {
+      border-right-width: 0px; }
+    .marcas-de-clientes .marca:nth-child(21), .marcas-de-clientes .marca:nth-child(22), .marcas-de-clientes .marca:nth-child(23), .marcas-de-clientes .marca:nth-child(24), .marcas-de-clientes .marca:nth-child(25) {
+      border-bottom-width: 0px; } }
+@media (max-width: 1000px) and (min-width: 801px) {
+  .marcas-de-clientes .marca {
+    width: 25%; }
+    .marcas-de-clientes .marca:nth-child(4n) {
+      border-right-width: 0px; }
+    .marcas-de-clientes .marca:nth-child(21), .marcas-de-clientes .marca:nth-child(22), .marcas-de-clientes .marca:nth-child(23), .marcas-de-clientes .marca:nth-child(24) {
+      border-bottom-width: 0px; }
+    .marcas-de-clientes .marca:last-child {
+      display: none; } }
+@media (max-width: 800px) and (min-width: 651px) {
+  .marcas-de-clientes .marca {
+    width: 33.333%; }
+    .marcas-de-clientes .marca:nth-child(3n) {
+      border-right-width: 0px; }
+    .marcas-de-clientes .marca:nth-child(22), .marcas-de-clientes .marca:nth-child(23), .marcas-de-clientes .marca:nth-child(24) {
+      border-bottom-width: 0px; }
+    .marcas-de-clientes .marca:last-child {
+      display: none; } }
+@media (max-width: 650px) and (min-width: 501px) {
+  .marcas-de-clientes .marca {
+    width: 50%; }
+    .marcas-de-clientes .marca:nth-child(odd) {
+      border-right-width: 0px; }
+    .marcas-de-clientes .marca:nth-child(23), .marcas-de-clientes .marca:nth-child(24) {
+      border-bottom-width: 0px; }
+    .marcas-de-clientes .marca:last-child {
+      display: none; } }
+@media (max-width: 500px) {
+  .marcas-de-clientes {
+    border: 1px solid #ccc;
+    margin-bottom: 4rem; }
+    .marcas-de-clientes .marca {
+      width: 100%;
+      padding: 80px 100px;
+      border-width: 0 0 1px 0; }
+      .marcas-de-clientes .marca:last-child {
+        border-bottom-width: 0px; } }
+
+/*# sourceMappingURL=main.css.map */
