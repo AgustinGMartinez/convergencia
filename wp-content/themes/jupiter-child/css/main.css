@@ -253,7 +253,7 @@ h4.icon-box-title {
   width: 100% !important; }
 
 .infraestructura-circulo-4 .mk-circle-image__holder a::after {
-  content: "RACKS";
+  content: "EQUIPOS Y RACKS";
   top: 0;
   left: 0;
   transform: translateY(-120%);

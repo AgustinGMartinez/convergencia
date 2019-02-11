@@ -505,57 +505,60 @@
         // draw logo at the end so it has a higher z-index
         c.drawImage(logo, canvas.width/2 - logo.width/2,  canvas.height/2 - logo.height/2);
 
-        animation = requestAnimationFrame(animate);
+        if (!eventsAreListening) {
+          // EVENT LISTENERS TO MANAGE LINKS
+          canvas.addEventListener('mousedown', function(e){
+            e.preventDefault();
+            var isMiddleClick = e.which == 2;
 
-        // EVENT LISTENERS TO MANAGE LINKS
-        canvas.addEventListener('mousedown', function(e){
-          e.preventDefault();
-          var isMiddleClick = e.which == 2;
-          console.log();
-
-          if (currentLink) {
-            if (!isMiddleClick) {
-              window.location.href = currentLink;
-            } else {
-              window.open(currentLink, "_blank");
-              currentLink = null;
-            }
-          }
-        });
-
-        var tooOften = false;
-        console.warn("attaching a new event listener")
-        canvas.addEventListener('mousemove', function(e){
-          if (!tooOften) {
-            tooOften = true;
-            var hovering = false;
-
-            var m =  {
-              x: event.clientX,
-              y: event.clientY
-            };
-
-
-            for (var c of currentLayers[currentLayers.length-1].circles) {
-              var distance = Math.sqrt(Math.pow(Math.abs(c.x - m.x), 2) + Math.pow(Math.abs(c.y - m.y), 2));
-
-              if (distance < c.radius) {
-                hovering = true;
-                currentLink = c.link;
-                document.body.style.cursor = "pointer";
+            if (currentLink) {
+              if (!isMiddleClick) {
+                window.location.href = currentLink;
+              } else {
+                window.open(currentLink, "_blank");
+                currentLink = null;
               }
             }
+          });
 
-            if (!hovering) {
-              currentLink = null;
-              document.body.style.cursor = "";
-            }
+          var tooOften = false;
+          console.warn("attaching a new event listener")
+          canvas.addEventListener('mousemove', function(e){
+            // if (!tooOften) {
+              tooOften = true;
+              var hovering = false;
 
-            window.setTimeout(function(){
-              tooOften = false;
-            }, 200);
-          }
-        });
+              var m =  {
+                x: event.clientX,
+                y: event.clientY
+              };
+
+
+              for (var c of currentLayers[currentLayers.length-1].circles) {
+                var distance = Math.sqrt(Math.pow(Math.abs(c.x - m.x), 2) + Math.pow(Math.abs(c.y - m.y), 2));
+
+                if (distance < c.radius) {
+                  hovering = true;
+                  currentLink = c.link;
+                  document.body.style.cursor = "pointer";
+                }
+              }
+
+              if (!hovering) {
+                currentLink = null;
+                document.body.style.cursor = "";
+              }
+
+              // window.setTimeout(function(){
+              //   tooOften = false;
+              // }, 200);
+            // }
+          });
+        }
+
+        eventsAreListening = true;
+
+        animation = requestAnimationFrame(animate);
       }
 
       init();
@@ -796,7 +799,13 @@
     var currentCanvas;
 
     chooseCanvasToShow();
-
+    window.removeEventListener('resize', chooseCanvasToShow);
     window.addEventListener('resize', chooseCanvasToShow);
 
-    var footerCanvasCo
+    var footerCanvasContainer = document.querySelector('.small-canvas-container');
+
+    if (footerCanvasContainer) {
+      smallCanvas("footer-canvas", footerCanvasContainer, false);
+    }
+  }
+})();
